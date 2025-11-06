@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dwip’s Network</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+    body {
+      background: #0a0a0a;
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 60px 20px;
+    }
+    h1 {
+      font-size: 2.4em;
+      margin-bottom: 10px;
+      background: linear-gradient(90deg, #00b4d8, #00ff88);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    p.tagline {
+      color: #aaa;
+      font-size: 1em;
+      margin-bottom: 35px;
+      text-align: center;
+    }
+    .section {
+      margin-bottom: 40px;
+      width: 100%;
+      max-width: 500px;
+    }
+    .section h2 {
+      font-size: 1.3em;
+      margin-bottom: 15px;
+      color: #00b4d8;
+      border-left: 3px solid #00b4d8;
+      padding-left: 10px;
+    }
+    .links {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    a {
+      color: #fff;
+      text-decoration: none;
+      background: #111;
+      padding: 12px 18px;
+      border-radius: 10px;
+      border: 1px solid #222;
+      transition: all 0.3s ease;
+    }
+    a:hover {
+      background: linear-gradient(90deg, #00b4d8, #00ff88);
+      color: #000;
+      transform: translateY(-3px);
+      box-shadow: 0 0 15px #00ff8855;
+    }
+    footer {
+      margin-top: 40px;
+      font-size: 0.9em;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <h1>Dwip’s Network</h1>
+  <p class="tagline">All my links, projects & socials ⚡</p>
+
+  <div class="section">
+    <h2>📫 Socials</h2>
+    <div class="links">
+      <a href="mailto:dwipbiswas290@gmail.com">dwipbiswas290@gmail.com</a>
+      <a href="mailto:dwipbiswas@yahoo.com">dwipbiswas@yahoo.com</a>
+      <a href="https://github.com/dwip-the-dev" target="_blank">GitHub</a>
+      <a href="https://t.me/dwip_thedev" target="_blank">Telegram</a>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>🧠 Projects</h2>
+    <div class="links" id="projects"></div>
+  </div>
+
+  <footer>© 2025 Dwip — All rights reserved 💀</footer>
+
+  <script>
+    const subs = [
+      "ai-made-this",
+      "lemonos",
+      "specspy",
+      "weatheriio",
+      "pythonforlosers",
+      "hms",
+      "f4kfiles",
+      "bytespace",
+      "aiofiles",
+      "writersworld",
+      "opnbook",
+      "portfolio"
+    ];
+    const container = document.getElementById('projects');
+    subs.forEach(sub => {
+      const a = document.createElement('a');
+      a.href = `https://${sub}.dwip.dedyn.io`;
+      a.textContent = sub;
+      a.target = "_blank";
+      container.appendChild(a);
+    });
+  </script>
+</body>
+</html>
